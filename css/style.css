@@ -1,0 +1,51 @@
+.wrapper{
+	margin:0px auto;
+	text-align:center;
+	background:#ccc;
+	border:1px solid #ddd;
+	padding:25px;
+	width:414px;
+}
+.action-bar{
+	margin-bottom:10px;
+}
+.status-bar{
+	margin-top:10px;
+	height:25px;
+	line-height:25px;
+	font-weight:bold;
+	border:1px dashed black;
+}
+.board{
+	box-shadow(0 3px 7px rgba(0,0,0,1));
+	border: 1px solid #999;
+	margin:0px auto;
+}
+.row{
+	display:table-row;
+}
+.col{
+	width:136px;
+	height:136px;
+	display:table-cell;
+	background-color:#ccc;
+	border-bottom:1px solid #999;
+	border-right:1px solid #999;
+	cursor:pointer;
+}
+.col .symbol{
+	font-size:84px;
+	line-height: 136px;
+	color:#999;
+}
+.col .symbol.won{
+	color:green;
+}
+.col:last-child{
+	border-top:0;
+	border-right:0;
+}
+.row:last-child > .col{
+	border-bottom:0;
+}
+

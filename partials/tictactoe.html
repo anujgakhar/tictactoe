@@ -1,0 +1,18 @@
+<div class="wrapper">
+	<div class="action-bar">
+		<input type="checkbox" value="{{computer_first}}" ng-model="computer_first" ng-checked="computer_first" />Computer First
+		<button id="start-game" ng-click="startGame()">Start new game</button>
+	</div>
+
+	<div class="tictactoe">
+		<div class="board">
+			<div ng-repeat="row in grid track by $index" class="row">
+				<div ng-repeat="col in grid track by $index" data-col="{{$index}}" data-row="{{$parent.$index}}" class="col" ng-click="makeMove($index, $parent.$index)">
+					<span ng-class="{'symbol':true, 'won':isSquareInWinningCombo($index, $parent.$index)}">{{getSquareSymbol($index, $parent.$index)}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="status-bar" ng-show="status_message.length > 0">{{status_message}}</div>
+</div>
