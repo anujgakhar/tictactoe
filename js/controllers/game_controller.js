@@ -16,7 +16,7 @@ function GameController($scope, game, grid_size) {
     $scope.makeMove = function(col, row){
         var boardIndex, symbol, winner;
         boardIndex = (row * grid_size) + col;
-        if(game.board && game.board.canMove(boardIndex)){
+        if(game.board && game.board.canMove(boardIndex) && !game.winner && !game.tie){
             // make move
             game.move(boardIndex);
 
