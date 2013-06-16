@@ -21,7 +21,6 @@ function GameController($scope, game, grid_size) {
 
             // check winner
             if(game.winner) {
-                console.log("game won by " + game.winner);
                 if(game.winner === game.board.X) $scope.status_message = "you lose!";
                 if(game.winner === game.board.O) $scope.status_message = "you win!";
                 $scope.game_over = true;
@@ -29,7 +28,6 @@ function GameController($scope, game, grid_size) {
 
             // check tie
             if(game.tie){
-                console.log("game tied");
                 $scope.status_message = "tie! no one wins!";
                 $scope.game_over = true;
             }
