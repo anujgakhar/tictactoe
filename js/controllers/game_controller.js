@@ -10,6 +10,7 @@ function GameController($scope, game, grid_size) {
         $scope.status_message = "";
         $scope.game_over = false;
     	game.start($scope.grid.length, $scope.computer_first);
+        $scope.status_message = "game started";
     }
 
     $scope.makeMove = function(col, row){
