@@ -42,8 +42,8 @@ Game.prototype = {
 					this.computer_move();
 				}
 				this.checkWinner(); 
-				if(!this.winner){
-					// this.tie = true;
+				if((!this.winner)&&(this.board.isFull())){
+					this.tie = true;
 				} 
 			} 
 		}
